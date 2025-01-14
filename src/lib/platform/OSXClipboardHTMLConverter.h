@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2014-2016 Symless Ltd.
  * Patch by Ryan Chapman
  *
@@ -21,24 +21,22 @@
 #include "OSXClipboardAnyTextConverter.h"
 
 //! Convert to/from HTML encoding
-class OSXClipboardHTMLConverter : public OSXClipboardAnyTextConverter {
+class OSXClipboardHTMLConverter : public OSXClipboardAnyTextConverter
+{
 public:
-    OSXClipboardHTMLConverter();
-    virtual ~OSXClipboardHTMLConverter();
+  OSXClipboardHTMLConverter();
+  virtual ~OSXClipboardHTMLConverter();
 
-    // IMSWindowsClipboardConverter overrides
-    virtual IClipboard::EFormat
-                        getFormat() const;
+  // IMSWindowsClipboardConverter overrides
+  virtual IClipboard::EFormat getFormat() const;
 
-    virtual CFStringRef    getOSXFormat() const;
+  virtual CFStringRef getOSXFormat() const;
 
 protected:
-    // OSXClipboardAnyTextConverter overrides
-    virtual String        doFromIClipboard(const String&) const;
-    virtual String        doToIClipboard(const String&) const;
+  // OSXClipboardAnyTextConverter overrides
+  virtual std::string doFromIClipboard(const std::string &) const;
+  virtual std::string doToIClipboard(const std::string &) const;
 
-    // generic encoding converter
-    static String        convertString(const String& data,
-                            CFStringEncoding fromEncoding,
-                            CFStringEncoding toEncoding);
+  // generic encoding converter
+  static std::string convertString(const std::string &data, CFStringEncoding fromEncoding, CFStringEncoding toEncoding);
 };

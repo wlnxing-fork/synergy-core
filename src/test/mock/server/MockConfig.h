@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2013-2016 Symless Ltd.
  *
  * This package is free software; you can redistribute it and/or
@@ -21,12 +21,14 @@
 
 #include "server/Config.h"
 
-#include "test/global/gmock.h"
+#include <gmock/gmock.h>
 
 class MockConfig : public Config
 {
 public:
-    MockConfig() : Config() { }
-    MOCK_METHOD(InputFilter*, getInputFilter, (), (override));
-    MOCK_METHOD(bool, isScreen, (const String&), (const, override));
+  MockConfig() : Config()
+  {
+  }
+  MOCK_METHOD(InputFilter *, getInputFilter, (), (override));
+  MOCK_METHOD(bool, isScreen, (const std::string &), (const, override));
 };

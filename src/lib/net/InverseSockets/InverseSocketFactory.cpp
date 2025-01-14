@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2012-2022 Symless Ltd.
  *
  * This package is free software; you can redistribute it and/or
@@ -24,35 +24,31 @@
 // InverseSocketFactory
 //
 
-InverseSocketFactory::InverseSocketFactory(IEventQueue* events, SocketMultiplexer* socketMultiplexer) :
-    m_events(events),
-    m_socketMultiplexer(socketMultiplexer)
+InverseSocketFactory::InverseSocketFactory(IEventQueue *events, SocketMultiplexer *socketMultiplexer)
+    : m_events(events),
+      m_socketMultiplexer(socketMultiplexer)
 {
 }
 
-IDataSocket*
-InverseSocketFactory::create(bool secure, IArchNetwork::EAddressFamily family) const
+IDataSocket *InverseSocketFactory::create(bool secure, IArchNetwork::EAddressFamily family) const
 {
-    if (secure) {
-        auto secureSocket = new SecureClientSocket(m_events, m_socketMultiplexer, family);
-        return secureSocket;
-    }
-    else {
-        return new InverseClientSocket(m_events, m_socketMultiplexer, family);
-    }
+  if (secure) {
+    auto secureSocket = new SecureClientSocket(m_events, m_socketMultiplexer, family);
+    return secureSocket;
+  } else {
+    return new InverseClientSocket(m_events, m_socketMultiplexer, family);
+  }
 }
 
-IListenSocket*
-InverseSocketFactory::createListen(bool secure, IArchNetwork::EAddressFamily family) const
+IListenSocket *InverseSocketFactory::createListen(bool secure, IArchNetwork::EAddressFamily family) const
 {
-    IListenSocket* socket = nullptr;
+  IListenSocket *socket = nullptr;
 
-    if (secure) {
-        socket = new SecureServerSocket(m_events, m_socketMultiplexer, family);
-    }
-    else {
-        socket = new InverseServerSocket(m_events, m_socketMultiplexer, family);
-    }
+  if (secure) {
+    socket = new SecureServerSocket(m_events, m_socketMultiplexer, family);
+  } else {
+    socket = new InverseServerSocket(m_events, m_socketMultiplexer, family);
+  }
 
-    return socket;
+  return socket;
 }

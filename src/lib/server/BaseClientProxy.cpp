@@ -1,12 +1,12 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2012-2016 Symless Ltd.
  * Copyright (C) 2006 Chris Schoeneman
- * 
+ *
  * This package is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * found in the file LICENSE that should have accompanied this file.
- * 
+ *
  * This package is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -22,35 +22,29 @@
 // BaseClientProxy
 //
 
-BaseClientProxy::BaseClientProxy(const String& name) :
-    m_name(name),
-    m_x(0),
-    m_y(0)
+BaseClientProxy::BaseClientProxy(const std::string &name) : m_name(name), m_x(0), m_y(0)
 {
-    // do nothing
+  // do nothing
 }
 
 BaseClientProxy::~BaseClientProxy()
 {
-    // do nothing
+  // do nothing
 }
 
-void
-BaseClientProxy::setJumpCursorPos(SInt32 x, SInt32 y)
+void BaseClientProxy::setJumpCursorPos(int32_t x, int32_t y)
 {
-    m_x = x;
-    m_y = y;
+  m_x = x;
+  m_y = y;
 }
 
-void
-BaseClientProxy::getJumpCursorPos(SInt32& x, SInt32& y) const
+void BaseClientProxy::getJumpCursorPos(int32_t &x, int32_t &y) const
 {
-    x = m_x;
-    y = m_y;
+  x = m_x;
+  y = m_y;
 }
 
-String
-BaseClientProxy::getName() const
+std::string BaseClientProxy::getName() const
 {
-    return m_name;
+  return m_name;
 }

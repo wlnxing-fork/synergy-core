@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2012-2021 Symless Ltd.
  * Copyright (C) 2008 Volker Lanz (vl@fidra.de)
  *
@@ -25,26 +25,26 @@ OSXPowerManager::OSXPowerManager()
 
 OSXPowerManager::~OSXPowerManager()
 {
-    enableSleep();
+  enableSleep();
 }
 
 void OSXPowerManager::disableSleep()
 {
-    if (!m_sleepPreventionAssertionID) {
-        CFStringRef reasonForActivity = CFSTR("Synergy application");
-        IOReturn result = IOPMAssertionCreateWithName(kIOPMAssertPreventUserIdleDisplaySleep,
-                                                      kIOPMAssertionLevelOn, reasonForActivity,
-                                                      &m_sleepPreventionAssertionID);
-        if (result != kIOReturnSuccess) {
-            m_sleepPreventionAssertionID = 0;
-            LOG((CLOG_ERR "failed to disable system idle sleep"));
-        }
+  if (!m_sleepPreventionAssertionID) {
+    CFStringRef reasonForActivity = CFSTR("Deskflow application");
+    IOReturn result = IOPMAssertionCreateWithName(
+        kIOPMAssertPreventUserIdleDisplaySleep, kIOPMAssertionLevelOn, reasonForActivity, &m_sleepPreventionAssertionID
+    );
+    if (result != kIOReturnSuccess) {
+      m_sleepPreventionAssertionID = 0;
+      LOG((CLOG_ERR "failed to disable system idle sleep"));
     }
+  }
 }
 
 void OSXPowerManager::enableSleep()
 {
-    if (m_sleepPreventionAssertionID) {
-        IOPMAssertionRelease(m_sleepPreventionAssertionID);
-    }
+  if (m_sleepPreventionAssertionID) {
+    IOPMAssertionRelease(m_sleepPreventionAssertionID);
+  }
 }

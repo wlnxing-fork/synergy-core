@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2016 Symless.
  *
  * This package is free software; you can redistribute it and/or
@@ -17,17 +17,18 @@
 
 #pragma once
 
-#import <CoreFoundation/CoreFoundation.h>
 #import <Carbon/Carbon.h>
+#import <CoreFoundation/CoreFoundation.h>
 
-#include "synergy/key_types.h"
+#include "deskflow/key_types.h"
 
 #if defined(__cplusplus)
-extern "C" {
+extern "C"
+{
 #endif
-bool                fakeNativeMediaKey(KeyID id);
-bool                isMediaKeyEvent(CGEventRef event);
-bool                getMediaKeyEventInfo(CGEventRef event, KeyID* keyId, bool* down, bool* isRepeat);
+  bool fakeNativeMediaKey(KeyID id);
+  bool isMediaKeyEvent(CGEventRef event);
+  bool getMediaKeyEventInfo(CGEventRef event, KeyID *keyId, bool *down, bool *isRepeat);
 #if defined(__cplusplus)
 }
 #endif

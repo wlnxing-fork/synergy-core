@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2012-2016 Symless Ltd.
  * Copyright (C) 2004 Chris Schoeneman
  *
@@ -22,9 +22,9 @@
 class OSXClipboardUTF8Converter : public OSXClipboardAnyTextConverter
 {
 public:
-    virtual CFStringRef getOSXFormat() const;
-private:
-    virtual String doFromIClipboard(const String&) const;
-    virtual String doToIClipboard(const String&) const;
-};
+  virtual CFStringRef getOSXFormat() const;
 
+private:
+  virtual std::string doFromIClipboard(const std::string &) const;
+  virtual std::string doToIClipboard(const std::string &) const;
+};

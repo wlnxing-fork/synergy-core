@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2015-2022 Symless Ltd.
  *
  * This package is free software; you can redistribute it and/or
@@ -15,15 +15,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #pragma once
-#include <string>
 #include <openssl/ssl.h>
+#include <string>
 
 class SslLogger
 {
 public:
-    static void logSecureLibInfo();
-    static void logSecureCipherInfo(const SSL* ssl);
-    static void logSecureConnectInfo(const SSL* ssl);
-    static void logError(const std::string& reason = "");
-    static void logErrorByCode(int code, int retry);
+  static void logSecureLibInfo();
+  static void logSecureCipherInfo(const SSL *ssl);
+  static void logSecureConnectInfo(const SSL *ssl);
+  static void logError(const std::string &reason = "");
+  static void logErrorByCode(int code, int retry);
 };

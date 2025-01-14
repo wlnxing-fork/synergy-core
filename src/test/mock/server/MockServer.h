@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2013-2016 Symless Ltd.
  *
  * This package is free software; you can redistribute it and/or
@@ -21,12 +21,14 @@
 
 #include "server/Server.h"
 
-#include "test/global/gmock.h"
+#include <gmock/gmock.h>
 
 class IEventQueue;
 
 class MockServer : public Server
 {
 public:
-    MockServer() : Server() { }
+  MockServer() : Server()
+  {
+  }
 };

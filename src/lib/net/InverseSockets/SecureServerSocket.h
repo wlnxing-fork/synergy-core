@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2015-2022 Symless Ltd.
  *
  * This package is free software; you can redistribute it and/or
@@ -17,14 +17,14 @@
 #pragma once
 #include "InverseServerSocket.h"
 
-class SecureServerSocket : public InverseServerSocket {
+class SecureServerSocket : public InverseServerSocket
+{
 public:
-    SecureServerSocket(IEventQueue* events,
-        SocketMultiplexer* socketMultiplexer, IArchNetwork::EAddressFamily family);
+  SecureServerSocket(IEventQueue *events, SocketMultiplexer *socketMultiplexer, IArchNetwork::EAddressFamily family);
 
-    // IListenSocket overrides
-    IDataSocket* accept() override;
+  // IListenSocket overrides
+  IDataSocket *accept() override;
 
 private:
-    std::string getCertifcateFileName() const;
+  std::string getCertificateFileName() const;
 };

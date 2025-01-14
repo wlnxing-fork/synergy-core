@@ -1,12 +1,12 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2012-2016 Symless Ltd.
  * Copyright (C) 2004 Chris Schoeneman
- * 
+ *
  * This package is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * found in the file LICENSE that should have accompanied this file.
- * 
+ *
  * This package is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -24,51 +24,42 @@
 // XWindowsClipboardHTMLConverter
 //
 
-XWindowsClipboardHTMLConverter::XWindowsClipboardHTMLConverter(
-                Display* display, const char* name) :
-    m_atom(XInternAtom(display, name, False))
+XWindowsClipboardHTMLConverter::XWindowsClipboardHTMLConverter(Display *display, const char *name)
+    : m_atom(XInternAtom(display, name, False))
 {
-    // do nothing
+  // do nothing
 }
 
 XWindowsClipboardHTMLConverter::~XWindowsClipboardHTMLConverter()
 {
-    // do nothing
+  // do nothing
 }
 
-IClipboard::EFormat
-XWindowsClipboardHTMLConverter::getFormat() const
+IClipboard::EFormat XWindowsClipboardHTMLConverter::getFormat() const
 {
-    return IClipboard::kHTML;
+  return IClipboard::kHTML;
 }
 
-Atom
-XWindowsClipboardHTMLConverter::getAtom() const
+Atom XWindowsClipboardHTMLConverter::getAtom() const
 {
-    return m_atom;
+  return m_atom;
 }
 
-int
-XWindowsClipboardHTMLConverter::getDataSize() const
+int XWindowsClipboardHTMLConverter::getDataSize() const
 {
-    return 8;
+  return 8;
 }
 
-String
-XWindowsClipboardHTMLConverter::fromIClipboard(const String& data) const
+std::string XWindowsClipboardHTMLConverter::fromIClipboard(const std::string &data) const
 {
+  return data;
+}
+
+std::string XWindowsClipboardHTMLConverter::toIClipboard(const std::string &data) const
+{
+  if (Unicode::isUTF8(data)) {
     return data;
-}
-
-String
-XWindowsClipboardHTMLConverter::toIClipboard(const String& data) const
-{
-    if (Unicode::isUTF8(data))
-    {
-        return data;
-    }
-    else
-    {
-        return Unicode::UTF16ToUTF8(data);
-    }
+  } else {
+    return Unicode::UTF16ToUTF8(data);
+  }
 }

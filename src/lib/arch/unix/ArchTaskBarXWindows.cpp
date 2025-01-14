@@ -1,12 +1,12 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2012-2016 Symless Ltd.
  * Copyright (C) 2003 Chris Schoeneman
- * 
+ *
  * This package is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * found in the file LICENSE that should have accompanied this file.
- * 
+ *
  * This package is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -24,28 +24,25 @@
 
 ArchTaskBarXWindows::ArchTaskBarXWindows()
 {
-    // do nothing
+  // do nothing
 }
 
 ArchTaskBarXWindows::~ArchTaskBarXWindows()
 {
-    // do nothing
+  // do nothing
 }
 
-void
-ArchTaskBarXWindows::addReceiver(IArchTaskBarReceiver* /*receiver*/)
+void ArchTaskBarXWindows::addReceiver(IArchTaskBarReceiver * /*receiver*/)
 {
-    // do nothing
+  // do nothing
 }
 
-void
-ArchTaskBarXWindows::removeReceiver(IArchTaskBarReceiver* /*receiver*/)
+void ArchTaskBarXWindows::removeReceiver(IArchTaskBarReceiver * /*receiver*/)
 {
-    // do nothing
+  // do nothing
 }
 
-void
-ArchTaskBarXWindows::updateReceiver(IArchTaskBarReceiver* /*receiver*/)
+void ArchTaskBarXWindows::updateReceiver(IArchTaskBarReceiver * /*receiver*/)
 {
-    // do nothing
+  // do nothing
 }

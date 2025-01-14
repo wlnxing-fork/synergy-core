@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2015-2022 Symless Ltd.
  *
  * This package is free software; you can redistribute it and/or
@@ -18,14 +18,16 @@
 #define TEST_ENV
 
 #include "ipc/IpcSettingMessage.h"
-#include "test/global/gtest.h"
 
-TEST(IpcSettingMessage, testIpcSettingMessage) {
-    const std::string expected_name = "test";
-    const std::string expected_value = "test_value";
+#include <gtest/gtest.h>
 
-    IpcSettingMessage message("test", "test_value");
+TEST(IpcSettingMessage, testIpcSettingMessage)
+{
+  const std::string expected_name = "test";
+  const std::string expected_value = "test_value";
 
-    EXPECT_EQ(expected_name, message.getName());
-    EXPECT_EQ(expected_value, message.getValue());
+  IpcSettingMessage message("test", "test_value");
+
+  EXPECT_EQ(expected_name, message.getName());
+  EXPECT_EQ(expected_value, message.getValue());
 }

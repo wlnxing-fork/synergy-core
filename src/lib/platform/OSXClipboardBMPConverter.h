@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2014-2016 Symless Ltd.
  * Patch by Ryan Chapman
  *
@@ -21,24 +21,21 @@
 #include "platform/OSXClipboard.h"
 
 //! Convert to/from some text encoding
-class OSXClipboardBMPConverter : public IOSXClipboardConverter {
+class OSXClipboardBMPConverter : public IOSXClipboardConverter
+{
 public:
-    OSXClipboardBMPConverter();
-    virtual ~OSXClipboardBMPConverter();
+  OSXClipboardBMPConverter();
+  virtual ~OSXClipboardBMPConverter();
 
-    // IMSWindowsClipboardConverter overrides
-    virtual IClipboard::EFormat
-                        getFormat() const;
+  // IMSWindowsClipboardConverter overrides
+  virtual IClipboard::EFormat getFormat() const;
 
-    virtual CFStringRef
-                        getOSXFormat() const;
+  virtual CFStringRef getOSXFormat() const;
 
-    // OSXClipboardAnyBMPConverter overrides
-    virtual String        fromIClipboard(const String&) const;
-    virtual String        toIClipboard(const String&) const;
+  // OSXClipboardAnyBMPConverter overrides
+  virtual std::string fromIClipboard(const std::string &) const;
+  virtual std::string toIClipboard(const std::string &) const;
 
-    // generic encoding converter
-    static String        convertString(const String& data,
-                            CFStringEncoding fromEncoding,
-                            CFStringEncoding toEncoding);
+  // generic encoding converter
+  static std::string convertString(const std::string &data, CFStringEncoding fromEncoding, CFStringEncoding toEncoding);
 };

@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2013-2016 Symless Ltd.
  *
  * This package is free software; you can redistribute it and/or
@@ -14,20 +14,20 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+#pragma once
 
 #import <Cocoa/Cocoa.h>
 
 #ifdef MAC_OS_X_VERSION_10_7
 
-@interface OSXDragView : NSView<NSDraggingSource,NSDraggingInfo>
-{
-    NSMutableString*    m_dropTarget;
-    NSString*    m_dragFileExt;
+@interface OSXDragView : NSView <NSDraggingSource, NSDraggingInfo> {
+  NSMutableString *m_dropTarget;
+  NSString *m_dragFileExt;
 }
 
 - (CFStringRef)getDropTarget;
 - (void)clearDropTarget;
-- (void)setFileExt:(NSString*) ext;
+- (void)setFileExt:(NSString *)ext;
 
 @end
 

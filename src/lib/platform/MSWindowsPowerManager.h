@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2012-2021 Symless Ltd.
  * Copyright (C) 2008 Volker Lanz (vl@fidra.de)
  *
@@ -15,24 +15,20 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef MSWINDOWSPOWERMANAGER_H
-#define MSWINDOWSPOWERMANAGER_H
-
+#pragma once
 
 class MSWindowsPowerManager
 {
 public:
-    ~MSWindowsPowerManager();
+  ~MSWindowsPowerManager();
 
-    /**
-     * @brief Prevents the system from sleep automatically
-     */
-    void disableSleep();
+  /**
+   * @brief Prevents the system from sleep automatically
+   */
+  void disableSleep();
 
-     /**
-      * @brief Enable automatically sleeping
-      */
-     void enableSleep();
+  /**
+   * @brief Enable automatically sleeping
+   */
+  void enableSleep();
 };
-
-#endif // MSWINDOWSPOWERMANAGER_H

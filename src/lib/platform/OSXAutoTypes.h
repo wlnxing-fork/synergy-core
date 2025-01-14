@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2022 Symless Ltd.
  *
  * This package is free software; you can redistribute it and/or
@@ -17,8 +17,8 @@
 #pragma once
 
 #if WINAPI_CARBON
-#include <memory>
 #include <Carbon/Carbon.h>
+#include <memory>
 
 using CFDeallocator = decltype(&CFRelease);
 using AutoCFArray = std::unique_ptr<const __CFArray, CFDeallocator>;

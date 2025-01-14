@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2012-2016 Symless Ltd.
  * Copyright (C) 2011 Nick Bolton
  *
@@ -19,11 +19,11 @@
 // TODO: fix tests
 #if 0
 
-#include "test/mock/synergy/MockEventQueue.h"
 #include "platform/XWindowsScreenSaver.h"
+#include "test/mock/deskflow/MockEventQueue.h"
 
-#include "test/global/gtest.h"
 #include <X11/Xlib.h>
+#include <gtest/gtest.h>
 
 using ::testing::_;
 

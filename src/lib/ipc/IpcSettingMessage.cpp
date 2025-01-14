@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2012-2016 Symless Ltd.
  * Copyright (C) 2012 Nick Bolton
  *
@@ -18,21 +18,19 @@
 
 #include "IpcSettingMessage.h"
 
-IpcSettingMessage::IpcSettingMessage(const std::string& name, const std::string& value) :
-    IpcMessage(kIpcSetting),
-    m_name(name),
-    m_value(value)
+IpcSettingMessage::IpcSettingMessage(const std::string &name, const std::string &value)
+    : IpcMessage(IpcMessageType::Setting),
+      m_name(name),
+      m_value(value)
 {
-
 }
 
-const std::string& IpcSettingMessage::getName() const
+const std::string &IpcSettingMessage::getName() const
 {
-    return m_name;
+  return m_name;
 }
 
-const std::string& IpcSettingMessage::getValue() const
+const std::string &IpcSettingMessage::getValue() const
 {
-    return m_value;
+  return m_value;
 }
-

@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2014-2016 Symless Ltd.
  * Patch by Ryan Chapman
  *
@@ -21,28 +21,25 @@
 
 OSXClipboardAnyBitmapConverter::OSXClipboardAnyBitmapConverter()
 {
-    // do nothing
+  // do nothing
 }
 
 OSXClipboardAnyBitmapConverter::~OSXClipboardAnyBitmapConverter()
 {
-    // do nothing
+  // do nothing
 }
 
-IClipboard::EFormat
-OSXClipboardAnyBitmapConverter::getFormat() const
+IClipboard::EFormat OSXClipboardAnyBitmapConverter::getFormat() const
 {
-    return IClipboard::kBitmap;
+  return IClipboard::kBitmap;
 }
 
-String
-OSXClipboardAnyBitmapConverter::fromIClipboard(const String& data) const
+std::string OSXClipboardAnyBitmapConverter::fromIClipboard(const std::string &data) const
 {
-    return doFromIClipboard(data);
+  return doFromIClipboard(data);
 }
 
-String
-OSXClipboardAnyBitmapConverter::toIClipboard(const String& data) const
+std::string OSXClipboardAnyBitmapConverter::toIClipboard(const std::string &data) const
 {
-    return doToIClipboard(data);
+  return doToIClipboard(data);
 }

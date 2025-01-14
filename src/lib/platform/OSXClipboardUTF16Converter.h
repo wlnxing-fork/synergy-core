@@ -1,12 +1,12 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2012-2016 Symless Ltd.
  * Copyright (C) 2004 Chris Schoeneman
- * 
+ *
  * This package is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * found in the file LICENSE that should have accompanied this file.
- * 
+ *
  * This package is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -21,17 +21,17 @@
 #include "platform/OSXClipboardAnyTextConverter.h"
 
 //! Convert to/from UTF-16 encoding
-class OSXClipboardUTF16Converter : public OSXClipboardAnyTextConverter {
+class OSXClipboardUTF16Converter : public OSXClipboardAnyTextConverter
+{
 public:
-    OSXClipboardUTF16Converter();
-    virtual ~OSXClipboardUTF16Converter();
+  OSXClipboardUTF16Converter();
+  virtual ~OSXClipboardUTF16Converter();
 
-    // IOSXClipboardAnyTextConverter overrides
-    virtual CFStringRef
-                        getOSXFormat() const;
+  // IOSXClipboardAnyTextConverter overrides
+  virtual CFStringRef getOSXFormat() const;
 
 protected:
-    // OSXClipboardAnyTextConverter overrides
-    virtual String        doFromIClipboard(const String&) const;
-    virtual String        doToIClipboard(const String&) const;
+  // OSXClipboardAnyTextConverter overrides
+  virtual std::string doFromIClipboard(const std::string &) const;
+  virtual std::string doToIClipboard(const std::string &) const;
 };

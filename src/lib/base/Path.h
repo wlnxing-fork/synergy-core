@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2014-2021 Symless Ltd.
  *
  * This package is free software; you can redistribute it and/or
@@ -14,24 +14,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef SYNERGY_PATH_H
-#define SYNERGY_PATH_H
+#pragma once
 
-#include "String.h"
+#include <common/common.h>
+#include <string>
 
-namespace synergy {
+namespace deskflow {
 
 namespace filesystem {
 
 #ifdef SYSAPI_WIN32
-    std::wstring path(const String& filePath);
+std::wstring path(const std::string &filePath);
 #else
-    std::string path(const String& filePath);
+std::string path(const std::string &filePath);
 #endif
 
+} // namespace filesystem
 
-} //namespace filesystem
-
-} //namespace synergy
-
-#endif // SYNERGY_PATH_H
+} // namespace deskflow

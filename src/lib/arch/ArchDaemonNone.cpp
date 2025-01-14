@@ -1,12 +1,12 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2012-2016 Symless Ltd.
  * Copyright (C) 2002 Chris Schoeneman
- * 
+ *
  * This package is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * found in the file LICENSE that should have accompanied this file.
- * 
+ *
  * This package is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -24,62 +24,50 @@
 
 ArchDaemonNone::ArchDaemonNone()
 {
-    // do nothing
+  // do nothing
 }
 
 ArchDaemonNone::~ArchDaemonNone()
 {
-    // do nothing
+  // do nothing
 }
 
-void
-ArchDaemonNone::installDaemon(const char*,
-                const char*,
-                const char*,
-                const char*,
-                const char*)
+void ArchDaemonNone::installDaemon(const char *, const char *, const char *, const char *, const char *)
 {
-    // do nothing
+  // do nothing
 }
 
-void
-ArchDaemonNone::uninstallDaemon(const char*)
+void ArchDaemonNone::uninstallDaemon(const char *)
 {
-    // do nothing
+  // do nothing
 }
 
-int
-ArchDaemonNone::daemonize(const char* name, DaemonFunc func)
+int ArchDaemonNone::daemonize(const char *name, DaemonFunc func)
 {
-    // simply forward the call to func.  obviously, this doesn't
-    // do any daemonizing.
-    return func(1, &name);
+  // simply forward the call to func.  obviously, this doesn't
+  // do any daemonizing.
+  return func(1, &name);
 }
 
-bool
-ArchDaemonNone::canInstallDaemon(const char*)
+bool ArchDaemonNone::canInstallDaemon(const char *)
 {
-    return false;
+  return false;
 }
 
-bool
-ArchDaemonNone::isDaemonInstalled(const char*)
+bool ArchDaemonNone::isDaemonInstalled(const char *)
 {
-    return false;
+  return false;
 }
 
-void
-ArchDaemonNone::installDaemon()
+void ArchDaemonNone::installDaemon()
 {
 }
 
-void
-ArchDaemonNone::uninstallDaemon()
+void ArchDaemonNone::uninstallDaemon()
 {
 }
 
-std::string
-ArchDaemonNone::commandLine() const
+std::string ArchDaemonNone::commandLine() const
 {
-    return "";
+  return "";
 }

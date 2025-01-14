@@ -1,12 +1,12 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2012-2016 Symless Ltd.
  * Copyright (C) 2002 Chris Schoeneman
- * 
+ *
  * This package is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * found in the file LICENSE that should have accompanied this file.
- * 
+ *
  * This package is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -23,11 +23,12 @@
 #define ARCH_SLEEP ArchSleepUnix
 
 //! Unix implementation of IArchSleep
-class ArchSleepUnix : public IArchSleep {
+class ArchSleepUnix : public IArchSleep
+{
 public:
-    ArchSleepUnix();
-    virtual ~ArchSleepUnix();
+  ArchSleepUnix();
+  virtual ~ArchSleepUnix();
 
-    // IArchSleep overrides
-    virtual void        sleep(double timeout);
+  // IArchSleep overrides
+  virtual void sleep(double timeout);
 };

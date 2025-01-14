@@ -1,5 +1,5 @@
 /*
- * synergy -- mouse and keyboard sharing utility
+ * Deskflow -- mouse and keyboard sharing utility
  * Copyright (C) 2012-2016 Symless Ltd.
  * Copyright (C) 2012 Nick Bolton
  *
@@ -18,33 +18,32 @@
 
 #pragma once
 
-#include <string>
 #include "IpcMessage.h"
+#include <string>
 
 class IpcSettingMessage : public IpcMessage
 {
 public:
-    //!
-    //! \brief IpcSettingMessage constructor
-    //! \param name - setting name
-    //! \param value - setting value
-    //!
-    IpcSettingMessage(const std::string& name, const std::string& value);
+  //!
+  //! \brief IpcSettingMessage constructor
+  //! \param name - setting name
+  //! \param value - setting value
+  //!
+  IpcSettingMessage(const std::string &name, const std::string &value);
 
-    //!
-    //! \brief getName is a getter for the setting name
-    //! \return setting name
-    //!
-    const std::string& getName() const;
+  //!
+  //! \brief getName is a getter for the setting name
+  //! \return setting name
+  //!
+  const std::string &getName() const;
 
-    //!
-    //! \brief getValue is a getter for the setting value
-    //! \return setting value
-    //!
-    const std::string& getValue() const;
+  //!
+  //! \brief getValue is a getter for the setting value
+  //! \return setting value
+  //!
+  const std::string &getValue() const;
 
 private:
-    std::string m_name;
-    std::string m_value;
+  std::string m_name;
+  std::string m_value;
 };
-
