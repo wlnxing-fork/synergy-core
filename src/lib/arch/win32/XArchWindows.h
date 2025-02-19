@@ -1,19 +1,8 @@
 /*
- * synergy -- mouse and keyboard sharing utility
- * Copyright (C) 2012-2016 Symless Ltd.
- * Copyright (C) 2002 Chris Schoeneman
- * 
- * This package is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * found in the file LICENSE that should have accompanied this file.
- * 
- * This package is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * Deskflow -- mouse and keyboard sharing utility
+ * SPDX-FileCopyrightText: (C) 2012 - 2016 Symless Ltd.
+ * SPDX-FileCopyrightText: (C) 2002 Chris Schoeneman
+ * SPDX-License-Identifier: GPL-2.0-only WITH LicenseRef-OpenSSL-Exception
  */
 
 #pragma once
@@ -24,26 +13,38 @@
 #include <Windows.h>
 
 //! Lazy error message string evaluation for windows
-class XArchEvalWindows : public XArchEval {
+class XArchEvalWindows : public XArchEval
+{
 public:
-    XArchEvalWindows() : m_error(GetLastError()) { }
-    XArchEvalWindows(DWORD error) : m_error(error) { }
-    virtual ~XArchEvalWindows() { }
+  XArchEvalWindows() : m_error(GetLastError())
+  {
+  }
+  XArchEvalWindows(DWORD error) : m_error(error)
+  {
+  }
+  virtual ~XArchEvalWindows()
+  {
+  }
 
-    virtual std::string    eval() const;
+  virtual std::string eval() const throw();
 
 private:
-    DWORD                m_error;
+  DWORD m_error;
 };
 
 //! Lazy error message string evaluation for winsock
-class XArchEvalWinsock : public XArchEval {
+class XArchEvalWinsock : public XArchEval
+{
 public:
-    XArchEvalWinsock(int error) : m_error(error) { }
-    virtual ~XArchEvalWinsock() { }
+  XArchEvalWinsock(int error) : m_error(error)
+  {
+  }
+  virtual ~XArchEvalWinsock()
+  {
+  }
 
-    virtual std::string    eval() const;
+  virtual std::string eval() const throw();
 
 private:
-    int                    m_error;
+  int m_error;
 };

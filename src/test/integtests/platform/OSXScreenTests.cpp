@@ -1,28 +1,19 @@
 /*
- * synergy -- mouse and keyboard sharing utility
- * Copyright (C) 2012-2016 Symless Ltd.
- * 
- * This package is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * found in the file LICENSE that should have accompanied this file.
- * 
- * This package is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * Deskflow -- mouse and keyboard sharing utility
+ * SPDX-FileCopyrightText: (C) 2012 - 2016 Symless Ltd.
+ * SPDX-License-Identifier: GPL-2.0-only WITH LicenseRef-OpenSSL-Exception
  */
 
-#include "platform/OSXScreen.h"
 #include "arch/Arch.h"
 #include "base/EventQueue.h"
+#include "platform/OSXScreen.h"
 
-#include "test/global/gtest.h"
+#include <gtest/gtest.h>
 
-// disabling these tests - the return value of CGCursorIsVisible is unreliable.
-/*
+// TODO: fix intermittently failing test
+// return value of CGCursorIsVisible is unreliable
+#if 0
+
 TEST(OSXScreenTests, hideCursor_notPrimary)
 {
     EventQueue queue;
@@ -48,4 +39,5 @@ TEST(OSXScreenTests, showCursor_notPrimary)
     // workaround for screen class race condition.
     ARCH->sleep(.1f);
 }
-*/
+
+#endif

@@ -1,27 +1,15 @@
 /*
- * synergy -- mouse and keyboard sharing utility
- * Copyright (C) 2012-2016 Symless Ltd.
- * Copyright (C) 2002 Chris Schoeneman
- * 
- * This package is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * found in the file LICENSE that should have accompanied this file.
- * 
- * This package is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * Deskflow -- mouse and keyboard sharing utility
+ * SPDX-FileCopyrightText: (C) 2012 - 2016 Symless Ltd.
+ * SPDX-FileCopyrightText: (C) 2002 Chris Schoeneman
+ * SPDX-License-Identifier: GPL-2.0-only WITH LicenseRef-OpenSSL-Exception
  */
 
 #pragma once
 
-#include "io/XIO.h"
 #include "base/XBase.h"
-#include "base/String.h"
-#include "common/basic_types.h"
+#include "common/common.h"
+#include "io/XIO.h"
 
 //! Generic socket exception
 XBASE_SUBCLASS(XSocket, XBase);
@@ -30,40 +18,44 @@ XBASE_SUBCLASS(XSocket, XBase);
 /*!
 Thrown when attempting to create an invalid network address.
 */
-class XSocketAddress : public XSocket {
+class XSocketAddress : public XSocket
+{
 public:
-    //! Failure codes
-    enum EError {
-        kUnknown,        //!< Unknown error
-        kNotFound,        //!< The hostname is unknown
-        kNoAddress,        //!< The hostname is valid but has no IP address
-        kUnsupported,    //!< The hostname is valid but has no supported address
-        kBadPort        //!< The port is invalid
-    };
+  //! Failure codes
+  enum EError
+  {
+    kUnknown,     //!< Unknown error
+    kNotFound,    //!< The hostname is unknown
+    kNoAddress,   //!< The hostname is valid but has no IP address
+    kUnsupported, //!< The hostname is valid but has no supported address
+    kBadPort      //!< The port is invalid
+  };
 
-    XSocketAddress(EError, const String& hostname, int port) _NOEXCEPT;
-    virtual ~XSocketAddress() _NOEXCEPT { }
+  XSocketAddress(EError, const std::string &hostname, int port) _NOEXCEPT;
+  virtual ~XSocketAddress() _NOEXCEPT
+  {
+  }
 
-    //! @name accessors
-    //@{
+  //! @name accessors
+  //@{
 
-    //! Get the error code
-    EError                getError() const throw();
-    //! Get the hostname
-    String                getHostname() const throw();
-    //! Get the port
-    int                    getPort() const throw();
+  //! Get the error code
+  EError getError() const throw();
+  //! Get the hostname
+  std::string getHostname() const throw();
+  //! Get the port
+  int getPort() const throw();
 
-    //@}
+  //@}
 
 protected:
-    // XBase overrides
-    virtual String        getWhat() const throw();
+  // XBase overrides
+  virtual std::string getWhat() const throw();
 
 private:
-    EError                m_error;
-    String                m_hostname;
-    int                    m_port;
+  EError m_error;
+  std::string m_hostname;
+  int m_port;
 };
 
 //! I/O closing exception

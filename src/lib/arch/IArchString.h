@@ -1,79 +1,58 @@
 /*
- * synergy -- mouse and keyboard sharing utility
- * Copyright (C) 2012-2016 Symless Ltd.
- * Copyright (C) 2002 Chris Schoeneman
- * 
- * This package is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * found in the file LICENSE that should have accompanied this file.
- * 
- * This package is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * Deskflow -- mouse and keyboard sharing utility
+ * SPDX-FileCopyrightText: (C) 2025 Deskflow Developers
+ * SPDX-FileCopyrightText: (C) 2012 - 2016 Symless Ltd.
+ * SPDX-FileCopyrightText: (C) 2002 Chris Schoeneman
+ * SPDX-License-Identifier: GPL-2.0-only WITH LicenseRef-OpenSSL-Exception
  */
 
 #pragma once
 
 #include "common/IInterface.h"
-#include "common/basic_types.h"
+#include "common/common.h"
 
 #include <stdarg.h>
 
 //! Interface for architecture dependent string operations
 /*!
 This interface defines the string operations required by
-synergy.  Each architecture must implement this interface.
+deskflow.  Each architecture must implement this interface.
 */
-class IArchString : public IInterface {
+class IArchString : public IInterface
+{
 public:
-    IArchString() =default;
-    IArchString(const IArchString &) =delete;
-    IArchString(IArchString &&) =delete;
-    virtual ~IArchString();
+  IArchString() = default;
+  IArchString(const IArchString &) = delete;
+  IArchString(IArchString &&) = delete;
+  virtual ~IArchString();
 
-    IArchString& operator=(const IArchString &) =delete;
-    IArchString& operator=(IArchString &&) =delete;
+  IArchString &operator=(const IArchString &) = delete;
+  IArchString &operator=(IArchString &&) = delete;
 
-    //! Wide character encodings
-    /*!
-    The known wide character encodings
-    */
-    enum EWideCharEncoding {
-        kUCS2,        //!< The UCS-2 encoding
-        kUCS4,        //!< The UCS-4 encoding
-        kUTF16,       //!< The UTF-16 encoding
-        kUTF32,       //!< The UTF-32 encoding
-        kPlatformDetermined
-    };
+  //! Wide character encodings
+  /*!
+  The known wide character encodings
+  */
+  enum EWideCharEncoding
+  {
+    kUCS2,  //!< The UCS-2 encoding
+    kUCS4,  //!< The UCS-4 encoding
+    kUTF16, //!< The UTF-16 encoding
+    kUTF32, //!< The UTF-32 encoding
+    kPlatformDetermined
+  };
 
-    //! @name manipulators
-    //@{
+  //! @name manipulators
+  //@{
 
-    //! printf() to limited size buffer with va_list
-    /*!
-    This method is equivalent to vsprintf() except it will not write
-    more than \c n bytes to the buffer, returning -1 if the output
-    was truncated and the number of bytes written not including the
-    trailing NUL otherwise.
-    */
-    virtual int            vsnprintf(char* str,
-                            int size, const char* fmt, va_list ap);
+  //! Convert multibyte string to wide character string
+  virtual int convStringMBToWC(wchar_t *, const char *, uint32_t n, bool *errors);
 
-    //! Convert multibyte string to wide character string
-    virtual int            convStringMBToWC(wchar_t*,
-                            const char*, UInt32 n, bool* errors);
+  //! Convert wide character string to multibyte string
+  virtual int convStringWCToMB(char *, const wchar_t *, uint32_t n, bool *errors);
 
-    //! Convert wide character string to multibyte string
-    virtual int            convStringWCToMB(char*,
-                            const wchar_t*, UInt32 n, bool* errors);
+  //! Return the architecture's native wide character encoding
+  virtual EWideCharEncoding getWideCharEncoding() = 0;
 
-    //! Return the architecture's native wide character encoding
-    virtual EWideCharEncoding
-                        getWideCharEncoding() = 0;
-
-    //@}
+  //@}
 };

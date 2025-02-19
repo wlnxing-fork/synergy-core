@@ -1,18 +1,7 @@
 /*
- * synergy -- mouse and keyboard sharing utility
- * Copyright (C) 2013-2016 Symless Ltd.
- * 
- * This package is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * found in the file LICENSE that should have accompanied this file.
- * 
- * This package is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * Deskflow -- mouse and keyboard sharing utility
+ * SPDX-FileCopyrightText: (C) 2013 - 2016 Symless Ltd.
+ * SPDX-License-Identifier: GPL-2.0-only WITH LicenseRef-OpenSSL-Exception
  */
 
 #include "base/EventTypes.h"
@@ -21,22 +10,19 @@
 #include <assert.h>
 #include <stddef.h>
 
-EventTypes::EventTypes() :
-    m_events(NULL)
+EventTypes::EventTypes() : m_events(NULL)
 {
 }
 
-IEventQueue*
-EventTypes::getEvents() const
+IEventQueue *EventTypes::getEvents() const
 {
-    assert(m_events != NULL);
-    return m_events;
+  assert(m_events != NULL);
+  return m_events;
 }
 
-void
-EventTypes::setEvents(IEventQueue* events)
+void EventTypes::setEvents(IEventQueue *events)
 {
-    m_events = events;
+  m_events = events;
 }
 
 //
@@ -57,6 +43,7 @@ REGISTER_EVENT(IStream, outputFlushed)
 REGISTER_EVENT(IStream, outputError)
 REGISTER_EVENT(IStream, inputShutdown)
 REGISTER_EVENT(IStream, outputShutdown)
+REGISTER_EVENT(IStream, inputFormatError)
 
 //
 // IpcClient
@@ -202,3 +189,10 @@ REGISTER_EVENT(Clipboard, clipboardSending)
 REGISTER_EVENT(File, fileChunkSending)
 REGISTER_EVENT(File, fileRecieveCompleted)
 REGISTER_EVENT(File, keepAlive)
+
+//
+// Ei
+//
+
+REGISTER_EVENT(Ei, connected)
+REGISTER_EVENT(Ei, sessionClosed)

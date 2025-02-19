@@ -1,19 +1,8 @@
 /*
- * synergy -- mouse and keyboard sharing utility
- * Copyright (C) 2012-2016 Symless Ltd.
- * Copyright (C) 2002 Chris Schoeneman
- * 
- * This package is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * found in the file LICENSE that should have accompanied this file.
- * 
- * This package is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * Deskflow -- mouse and keyboard sharing utility
+ * SPDX-FileCopyrightText: (C) 2012 - 2016 Symless Ltd.
+ * SPDX-FileCopyrightText: (C) 2002 Chris Schoeneman
+ * SPDX-License-Identifier: GPL-2.0-only WITH LicenseRef-OpenSSL-Exception
  */
 
 #include "base/FunctionJob.h"
@@ -22,22 +11,19 @@
 // FunctionJob
 //
 
-FunctionJob::FunctionJob(void (*func)(void*), void* arg) :
-    m_func(func),
-    m_arg(arg)
+FunctionJob::FunctionJob(void (*func)(void *), void *arg) : m_func(func), m_arg(arg)
 {
-    // do nothing
+  // do nothing
 }
 
 FunctionJob::~FunctionJob()
 {
-    // do nothing
+  // do nothing
 }
 
-void
-FunctionJob::run()
+void FunctionJob::run()
 {
-    if (m_func != NULL) {
-        m_func(m_arg);
-    }
+  if (m_func != NULL) {
+    m_func(m_arg);
+  }
 }

@@ -1,91 +1,99 @@
 /*
- * synergy -- mouse and keyboard sharing utility
- * Copyright (C) 2012-2016 Symless Ltd.
- * Copyright (C) 2012 Nick Bolton
- * 
- * This package is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * found in the file LICENSE that should have accompanied this file.
- * 
- * This package is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * Deskflow -- mouse and keyboard sharing utility
+ * SPDX-FileCopyrightText: (C) 2012 Symless Ltd.
+ * SPDX-License-Identifier: GPL-2.0-only WITH LicenseRef-OpenSSL-Exception
  */
 
 #pragma once
 
-#include "ipc/Ipc.h"
-#include "base/EventTypes.h"
-#include "base/String.h"
 #include "base/Event.h"
+#include "common/ipc.h"
 
-class IpcMessage : public EventData {
+#include <string>
+
+class IpcMessage : public EventData
+{
 public:
-    virtual ~IpcMessage();
+  ~IpcMessage() override = default;
 
-    //! Gets the message type ID.
-    UInt8                type() const { return m_type; }
+  //! Gets the message type ID.
+  IpcMessageType type() const
+  {
+    return m_type;
+  }
 
 protected:
-    IpcMessage(UInt8 type);
+  explicit IpcMessage(IpcMessageType type);
 
 private:
-    UInt8                m_type;
+  IpcMessageType m_type;
 };
 
-class IpcHelloMessage : public IpcMessage {
+class IpcHelloMessage : public IpcMessage
+{
 public:
-    IpcHelloMessage(EIpcClientType clientType);
-    virtual ~IpcHelloMessage();
+  explicit IpcHelloMessage(IpcClientType clientType);
+  ~IpcHelloMessage() override = default;
 
-    //! Gets the message type ID.
-    EIpcClientType            clientType() const { return m_clientType; }
+  //! Gets the message type ID.
+  IpcClientType clientType() const
+  {
+    return m_clientType;
+  }
 
 private:
-    EIpcClientType            m_clientType;
+  IpcClientType m_clientType;
 };
 
-class IpcHelloBackMessage : public IpcMessage {
+class IpcHelloBackMessage : public IpcMessage
+{
 public:
-    IpcHelloBackMessage();
-    virtual ~IpcHelloBackMessage();
+  explicit IpcHelloBackMessage();
+  ~IpcHelloBackMessage() override = default;
 };
 
-class IpcShutdownMessage : public IpcMessage {
+class IpcShutdownMessage : public IpcMessage
+{
 public:
-    IpcShutdownMessage();
-    virtual ~IpcShutdownMessage();
+  explicit IpcShutdownMessage();
+  ~IpcShutdownMessage() override = default;
 };
 
-
-class IpcLogLineMessage : public IpcMessage {
+class IpcLogLineMessage : public IpcMessage
+{
 public:
-    IpcLogLineMessage(const String& logLine);
-    virtual ~IpcLogLineMessage();
+  explicit IpcLogLineMessage(const std::string &logLine);
+  ~IpcLogLineMessage() override = default;
 
-    //! Gets the log line.
-    String                logLine() const { return m_logLine; }
+  //! Gets the log line.
+  std::string logLine() const
+  {
+    return m_logLine;
+  }
 
 private:
-    String                m_logLine;
+  std::string m_logLine;
 };
 
-class IpcCommandMessage : public IpcMessage {
+class IpcCommandMessage : public IpcMessage
+{
 public:
-    IpcCommandMessage(const String& command, bool elevate);
-    virtual ~IpcCommandMessage();
+  explicit IpcCommandMessage(const std::string &command, bool elevate);
+  ~IpcCommandMessage() override = default;
 
-    //! Gets the command.
-    String                command() const { return m_command; }
+  //! Gets the command.
+  std::string command() const
+  {
+    return m_command;
+  }
 
-    //! Gets whether or not the process should be elevated on MS Windows.
-    bool                elevate() const { return m_elevate; }
+  //! Gets whether or not the process should be elevated on MS Windows.
+  bool elevate() const
+  {
+    return m_elevate;
+  }
 
 private:
-    String                m_command;
-    bool                m_elevate;
+  std::string m_command;
+  bool m_elevate;
 };

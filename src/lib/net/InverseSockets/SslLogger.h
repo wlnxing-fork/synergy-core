@@ -1,29 +1,19 @@
 /*
- * synergy -- mouse and keyboard sharing utility
- * Copyright (C) 2015-2022 Symless Ltd.
- *
- * This package is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * found in the file LICENSE that should have accompanied this file.
- *
- * This package is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * Deskflow -- mouse and keyboard sharing utility
+ * SPDX-FileCopyrightText: (C) 2015 - 2022 Symless Ltd.
+ * SPDX-License-Identifier: GPL-2.0-only WITH LicenseRef-OpenSSL-Exception
  */
+
 #pragma once
-#include <string>
 #include <openssl/ssl.h>
+#include <string>
 
 class SslLogger
 {
 public:
-    static void logSecureLibInfo();
-    static void logSecureCipherInfo(const SSL* ssl);
-    static void logSecureConnectInfo(const SSL* ssl);
-    static void logError(const std::string& reason = "");
-    static void logErrorByCode(int code, int retry);
+  static void logSecureLibInfo();
+  static void logSecureCipherInfo(const SSL *ssl);
+  static void logSecureConnectInfo(const SSL *ssl);
+  static void logError(const std::string &reason = "");
+  static void logErrorByCode(int code, int retry);
 };

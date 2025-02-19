@@ -1,26 +1,15 @@
 /*
- * synergy -- mouse and keyboard sharing utility
- * Copyright (C) 2012-2016 Symless Ltd.
- * Copyright (C) 2002 Chris Schoeneman
- * 
- * This package is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * found in the file LICENSE that should have accompanied this file.
- * 
- * This package is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * Deskflow -- mouse and keyboard sharing utility
+ * SPDX-FileCopyrightText: (C) 2012 - 2016 Symless Ltd.
+ * SPDX-FileCopyrightText: (C) 2002 Chris Schoeneman
+ * SPDX-License-Identifier: GPL-2.0-only WITH LicenseRef-OpenSSL-Exception
  */
 
 #pragma once
 
 #include "common/common.h"
-#include "common/stdstring.h"
 #include "common/stdexcept.h"
+#include <string>
 
 //! Generic thread exception
 /*!
@@ -28,14 +17,18 @@ Exceptions derived from this class are used by the multithreading
 library to perform stack unwinding when a thread terminates.  These
 exceptions must always be rethrown by clients when caught.
 */
-class XThread { };
+class XThread
+{
+};
 
 //! Thread exception to cancel
 /*!
 Thrown to cancel a thread.  Clients must not throw this type, but
 must rethrow it if caught (by XThreadCancel, XThread, or ...).
 */
-class XThreadCancel : public XThread { };
+class XThreadCancel : public XThread
+{
+};
 
 /*!
 \def RETHROW_XTHREAD
@@ -43,8 +36,13 @@ Convenience macro to rethrow an XThread exception but ignore other
 exceptions.  Put this in your catch (...) handler after necessary
 cleanup but before leaving or returning from the handler.
 */
-#define RETHROW_XTHREAD \
-    try { throw; } catch (XThread&) { throw; } catch (...) { }
+#define RETHROW_XTHREAD                                                                                                \
+  try {                                                                                                                \
+    throw;                                                                                                             \
+  } catch (XThread &) {                                                                                                \
+    throw;                                                                                                             \
+  } catch (...) {                                                                                                      \
+  }
 
 //! Lazy error message string evaluation
 /*!
@@ -53,29 +51,47 @@ Platforms subclass this type, taking an appropriate error code
 type in the c'tor and overriding eval() to return the error
 string for that error code.
 */
-class XArchEval {
+class XArchEval
+{
 public:
-    XArchEval() { }
-    virtual ~XArchEval() _NOEXCEPT { }
-    
-    virtual std::string    eval() const = 0;
+  XArchEval()
+  {
+  }
+  virtual ~XArchEval() _NOEXCEPT
+  {
+  }
+
+  virtual std::string eval() const = 0;
 };
 
 //! Generic exception architecture dependent library
-class XArch : public std::runtime_error {
+class XArch : public std::runtime_error
+{
 public:
-    XArch(XArchEval* adopted) : std::runtime_error(adopted->eval()) { delete adopted; }
-    XArch(const std::string& msg) : std::runtime_error(msg) { }
-    virtual ~XArch() _NOEXCEPT { }
+  XArch(XArchEval *adopted) : std::runtime_error(adopted->eval())
+  {
+    delete adopted;
+  }
+  XArch(const std::string &msg) : std::runtime_error(msg)
+  {
+  }
+  virtual ~XArch() _NOEXCEPT
+  {
+  }
 };
 
 // Macro to declare XArch derived types
-#define XARCH_SUBCLASS(name_, super_)                                    \
-class name_ : public super_ {                                            \
-public:                                                                    \
-    name_(XArchEval* adoptedEvaluator) : super_(adoptedEvaluator) { }    \
-    name_(const std::string& msg) : super_(msg) { }                        \
-}
+#define XARCH_SUBCLASS(name_, super_)                                                                                  \
+  class name_ : public super_                                                                                          \
+  {                                                                                                                    \
+  public:                                                                                                              \
+    name_(XArchEval *adoptedEvaluator) : super_(adoptedEvaluator)                                                      \
+    {                                                                                                                  \
+    }                                                                                                                  \
+    name_(const std::string &msg) : super_(msg)                                                                        \
+    {                                                                                                                  \
+    }                                                                                                                  \
+  }
 
 //! Generic network exception
 /*!

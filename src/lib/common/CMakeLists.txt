@@ -1,24 +1,31 @@
-# synergy -- mouse and keyboard sharing utility
-# Copyright (C) 2012-2016 Symless Ltd.
-# Copyright (C) 2009 Nick Bolton
-# 
-# This package is free software; you can redistribute it and/or
-# modify it under the terms of the GNU General Public License
-# found in the file LICENSE that should have accompanied this file.
-# 
-# This package is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# SPDX-FileCopyrightText: (C) 2024 Chris Rizzitello <sithlord48@gmail.com>
+# SPDX-License-Identifier: MIT
 
-file(GLOB headers "*.h")
-file(GLOB sources "*.cpp")
+set(CMAKE_INCLUDE_CURRENT_DIR_IN_INTERFACE ON)
 
-if (SYNERGY_ADD_HEADERS)
-    list(APPEND sources ${headers})
+configure_file(constants.h.in constants.h @ONLY)
+
+add_library(common INTERFACE
+  common.h
+  IInterface.h
+  ipc.h
+  stdbitset.h
+  stddeque.h
+  stdexcept.h
+  stdfstream.h
+  stdistream.h
+  stdlist.h
+  stdmap.h
+  stdostream.h
+  stdpost.h
+  stdpre.h
+  stdset.h
+  stdsstream.h
+  stdvector.h
+  ${CMAKE_CURRENT_BINARY_DIR}/constants.h
+)
+
+if(APPLE)
+  target_sources(common INTERFACE MacOSXPrecomp.h)
 endif()
 
-add_library(common STATIC ${sources})
