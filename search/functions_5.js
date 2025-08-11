@@ -24,7 +24,7 @@ var searchData=
   ['entersecondary_21',['enterSecondary',['../classdeskflow_1_1Screen.html#a217afe950c1f4c1e49ddcb88af197a08',1,'deskflow::Screen']]],
   ['equal_22',['equal',['../classdeskflow_1_1string_1_1CaselessCmp.html#ab63695499e23c3d1884dcc3ce9895230',1,'deskflow::string::CaselessCmp::equal()'],['../classIKeyState_1_1KeyInfo.html#a4b2b06b49a695a2d84d567f2c523bd1f',1,'IKeyState::KeyInfo::equal()'],['../classIPrimaryScreen_1_1ButtonInfo.html#a8fe9bc4c84ea85e647bca04ce81ea5dc',1,'IPrimaryScreen::ButtonInfo::equal()']]],
   ['erase_23',['erase',['../classPriorityQueue.html#ae2316c3c0268deaa2953a74439b98817',1,'PriorityQueue']]],
-  ['error_24',['error',['../classdeskflow_1_1gui_1_1CoreProcess.html#a81903a3140e7c68181bcf025ac080d75',1,'deskflow::gui::CoreProcess::error()'],['../classXWindowsClipboard_1_1CICCCMGetClipboard.html#ab32409e2affc458b21f0b136f901049b',1,'XWindowsClipboard::CICCCMGetClipboard::error()']]],
+  ['error_24',['error',['../classdeskflow_1_1gui_1_1CoreProcess.html#aa6b3faa1c42637f07adb9a6bef2e7065',1,'deskflow::gui::CoreProcess::error()'],['../classXWindowsClipboard_1_1CICCCMGetClipboard.html#ab32409e2affc458b21f0b136f901049b',1,'XWindowsClipboard::CICCCMGetClipboard::error()']]],
   ['errorlock_25',['ErrorLock',['../classXWindowsUtil_1_1ErrorLock.html#af7064a3ae6fdae8512ef305986c2fa3d',1,'XWindowsUtil::ErrorLock::ErrorLock(Display *)'],['../classXWindowsUtil_1_1ErrorLock.html#ad1f5fe77f5be4bfc7e6c7edc6011e983',1,'XWindowsUtil::ErrorLock::ErrorLock(ErrorLock const &amp;)=delete'],['../classXWindowsUtil_1_1ErrorLock.html#abccc7ccfb39f10bb3340934ac3dd1d44',1,'XWindowsUtil::ErrorLock::ErrorLock(ErrorLock &amp;&amp;)=delete'],['../classXWindowsUtil_1_1ErrorLock.html#aab75fa73bf4a731ea2515e16bbe01df9',1,'XWindowsUtil::ErrorLock::ErrorLock(Display *, bool *errorFlag)'],['../classXWindowsUtil_1_1ErrorLock.html#a36fd47b60342baa436d5328f3cfa0676',1,'XWindowsUtil::ErrorLock::ErrorLock(Display *, ErrorHandler handler, void *userData)']]],
   ['errormessagebox_26',['errorMessageBox',['../ArchMiscWindows_8cpp.html#a971d7dd2fad8e1cc7c04b58025bdd762',1,'ArchMiscWindows.cpp']]],
   ['errortostring_27',['errorToString',['../XArchUnix_8cpp.html#aa89045461ec4ebc817338692ea515e9c',1,'errorToString(int error):&#160;XArchUnix.cpp'],['../XArchUnix_8h.html#aa89045461ec4ebc817338692ea515e9c',1,'errorToString(int error):&#160;XArchUnix.cpp']]],
@@ -35,6 +35,7 @@ var searchData=
   ['events_32',['events',['../classTCPListenSocket.html#a27a6c9596bda2d60832740ce7d7d984b',1,'TCPListenSocket']]],
   ['exit_33',['exit',['../classThread.html#a3bc7f9f6557f62734432d1421525cf68',1,'Thread']]],
   ['exitapp_34',['exitApp',['../classAppUtil.html#a0ab681d361fbb3531870cd624d45e8ca',1,'AppUtil::exitApp()'],['../classAppUtilWindows.html#aa3e682db043261faf827019df0cfbf06',1,'AppUtilWindows::exitApp()']]],
-  ['exitappstatic_35',['exitAppStatic',['../classAppUtil.html#aff79fd6fc709bd41bb9a2d2a84ee9e53',1,'AppUtil']]],
-  ['extracted_36',['extracted',['../classdeskflow_1_1gui_1_1CoreProcess.html#a126cc1ab7d87b6f2e7dac8c63e25e369',1,'deskflow::gui::CoreProcess::extracted()'],['../classSettingsDialog.html#a2ae5c7308d4e1598e0f13a5800a8f51e',1,'SettingsDialog::extracted()']]]
+  ['exitappexception_35',['ExitAppException',['../classExitAppException.html#a61c3d2092d07a05c10f8b3b14482e6b6',1,'ExitAppException']]],
+  ['exitappstatic_36',['exitAppStatic',['../classAppUtil.html#aff79fd6fc709bd41bb9a2d2a84ee9e53',1,'AppUtil']]],
+  ['extracted_37',['extracted',['../classdeskflow_1_1gui_1_1CoreProcess.html#a126cc1ab7d87b6f2e7dac8c63e25e369',1,'deskflow::gui::CoreProcess::extracted()'],['../classSettingsDialog.html#a2ae5c7308d4e1598e0f13a5800a8f51e',1,'SettingsDialog::extracted()']]]
 ];
