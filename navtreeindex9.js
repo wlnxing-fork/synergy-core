@@ -1,5 +1,8 @@
 var NAVTREEINDEX9 =
 {
+"classDaemonApp.html#a8c1c0b43c6b01e1a27cb0c4de5fed7a0":[6,0,84,4],
+"classDaemonApp.html#a9760570352c929772dcd53a3acfff527":[6,0,84,9],
+"classDaemonApp.html#aa4818fa610be8f37215cbc98f9eeb097":[6,0,84,8],
 "classDaemonApp.html#aaf47731bdcae76444e97bd72a11a0e84":[6,0,84,3],
 "classDaemonApp.html#ae49af1be8b475b0c96e6c820f0a0e3a1":[6,0,84,1],
 "classDataDownloader.html":[6,0,85],
@@ -77,12 +80,12 @@ var NAVTREEINDEX9 =
 "classFingerprintDatabase.html#a96b14056d161c6b9edab1cfc6efded75":[6,0,96,0],
 "classFingerprintDatabase.html#ae7b013cafc9d8ab294b1f4c894515e2f":[6,0,96,1],
 "classFingerprintDialog.html":[6,0,97],
-"classFingerprintDialog.html#a5b422dcd4f32bd0a4d84674d137627af":[6,0,97,0],
+"classFingerprintDialog.html#a01b60a7f7716d842bd268d400e5f1c78":[6,0,97,0],
 "classFingerprintDialog.html#adcf7b7eadc6efe8103cadd81968f0f6f":[6,0,97,1],
-"classFingerprintDialog.html#af1d99de0eecf9ef078a434f665dfb4f1":[6,0,97,2],
 "classFingerprintPreview.html":[6,0,98],
 "classFingerprintPreview.html#a3d31e6ecd6e5a85c20201f13d7f35fff":[6,0,98,1],
-"classFingerprintPreview.html#a74f0f523577a151c942a450854e228ee":[6,0,98,0],
+"classFingerprintPreview.html#a89faeaec9798380efefae29e9e5e26aa":[6,0,98,0],
+"classFingerprintPreview.html#ac5d86965ea349122495cefbe634108ab":[6,0,98,2],
 "classFunctionEventJob.html":[6,0,99],
 "classFunctionEventJob.html#a4640b7ba689a9baaa95180efa587fabf":[6,0,99,1],
 "classFunctionEventJob.html#a884ae6a2f2ffd1af438b805e23cffaf4":[6,0,99,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX9 =
 "classIClipboard.html#a1d014188948be557b3a3d88034d7081ea18c18b7e572415539aa8a3aa94ec33fa":[6,0,109,1,3],
 "classIClipboard.html#a1d014188948be557b3a3d88034d7081ea4c4ad5fca2e7a3f74dbb1ced00381aa4":[6,0,109,1,1],
 "classIClipboard.html#a1d014188948be557b3a3d88034d7081ea86ee74baff479d85d18f2cda9f8a9518":[6,0,109,1,2],
-"classIClipboard.html#a1d014188948be557b3a3d88034d7081ea9dffbf69ffba8bc38bc4e01abf4b1675":[6,0,109,1,0],
-"classIClipboard.html#a36863b148ae50b8df7bed6b9b52e5a6b":[6,0,109,5],
-"classIClipboard.html#a592a7bd11ebba7e51b21ad3b651b6989":[6,0,109,10],
-"classIClipboard.html#a5eea232f00e11ff558ae97dd4157a151":[6,0,109,7]
+"classIClipboard.html#a1d014188948be557b3a3d88034d7081ea9dffbf69ffba8bc38bc4e01abf4b1675":[6,0,109,1,0]
 };
