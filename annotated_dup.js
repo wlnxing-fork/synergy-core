@@ -63,6 +63,7 @@ var annotated_dup =
       [ "AliasValidator", "classvalidators_1_1AliasValidator.html", "classvalidators_1_1AliasValidator" ],
       [ "ComputerNameValidator", "classvalidators_1_1ComputerNameValidator.html", "classvalidators_1_1ComputerNameValidator" ],
       [ "EmptyStringValidator", "classvalidators_1_1EmptyStringValidator.html", "classvalidators_1_1EmptyStringValidator" ],
+      [ "IpAddressValidator", "classvalidators_1_1IpAddressValidator.html", "classvalidators_1_1IpAddressValidator" ],
       [ "IStringValidator", "classvalidators_1_1IStringValidator.html", "classvalidators_1_1IStringValidator" ],
       [ "LineEditValidator", "classvalidators_1_1LineEditValidator.html", "classvalidators_1_1LineEditValidator" ],
       [ "ScreenDuplicationsValidator", "classvalidators_1_1ScreenDuplicationsValidator.html", "classvalidators_1_1ScreenDuplicationsValidator" ],
@@ -313,6 +314,7 @@ var annotated_dup =
     [ "UnknownClientException", "classUnknownClientException.html", "classUnknownClientException" ],
     [ "VersionChecker", "classVersionChecker.html", "classVersionChecker" ],
     [ "Win32Modifiers", "structWin32Modifiers.html", "structWin32Modifiers" ],
+    [ "XDGPowerManager", "classXDGPowerManager.html", "classXDGPowerManager" ],
     [ "XIOReadMismatch", "classXIOReadMismatch.html", "classXIOReadMismatch" ],
     [ "XWindowsClipboard", "classXWindowsClipboard.html", "classXWindowsClipboard" ],
     [ "XWindowsClipboardAnyBitmapConverter", "classXWindowsClipboardAnyBitmapConverter.html", "classXWindowsClipboardAnyBitmapConverter" ],
@@ -323,7 +325,6 @@ var annotated_dup =
     [ "XWindowsClipboardUTF8Converter", "classXWindowsClipboardUTF8Converter.html", "classXWindowsClipboardUTF8Converter" ],
     [ "XWindowsEventQueueBuffer", "classXWindowsEventQueueBuffer.html", "classXWindowsEventQueueBuffer" ],
     [ "XWindowsKeyState", "classXWindowsKeyState.html", "classXWindowsKeyState" ],
-    [ "XWindowsPowerManager", "classXWindowsPowerManager.html", "classXWindowsPowerManager" ],
     [ "XWindowsScreen", "classXWindowsScreen.html", "classXWindowsScreen" ],
     [ "XWindowsScreenSaver", "classXWindowsScreenSaver.html", "classXWindowsScreenSaver" ],
     [ "XWindowsUtil", "classXWindowsUtil.html", "classXWindowsUtil" ]
