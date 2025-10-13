@@ -1,9 +1,5 @@
 var NAVTREEINDEX19 =
 {
-"classdeskflow_1_1Screen.html#ad625109983215a61cca9ebe2893df4c6":[5,0,0,16,24],
-"classdeskflow_1_1Screen.html#ad625109983215a61cca9ebe2893df4c6":[6,0,0,15,24],
-"classdeskflow_1_1Screen.html#ad6784e5540379a01bb63641bc370c949":[5,0,0,16,31],
-"classdeskflow_1_1Screen.html#ad6784e5540379a01bb63641bc370c949":[6,0,0,15,31],
 "classdeskflow_1_1Screen.html#add222dcc3c15e6092f2f2e4e601ca512":[5,0,0,16,45],
 "classdeskflow_1_1Screen.html#add222dcc3c15e6092f2f2e4e601ca512":[6,0,0,15,45],
 "classdeskflow_1_1Screen.html#aeb5289e8ed00623aafc80f89c80a02a6":[5,0,0,16,43],
@@ -58,8 +54,8 @@ var NAVTREEINDEX19 =
 "classdeskflow_1_1gui_1_1CoreProcess.html":[6,0,0,2,4],
 "classdeskflow_1_1gui_1_1CoreProcess.html#a0019841345b08a36b50a172c5e2bf4bf":[5,0,0,3,5,16],
 "classdeskflow_1_1gui_1_1CoreProcess.html#a0019841345b08a36b50a172c5e2bf4bf":[6,0,0,2,4,16],
-"classdeskflow_1_1gui_1_1CoreProcess.html#a0a6b6dc9aa924805e81b27fa9a437391":[5,0,0,3,5,24],
-"classdeskflow_1_1gui_1_1CoreProcess.html#a0a6b6dc9aa924805e81b27fa9a437391":[6,0,0,2,4,24],
+"classdeskflow_1_1gui_1_1CoreProcess.html#a0a6b6dc9aa924805e81b27fa9a437391":[5,0,0,3,5,23],
+"classdeskflow_1_1gui_1_1CoreProcess.html#a0a6b6dc9aa924805e81b27fa9a437391":[6,0,0,2,4,23],
 "classdeskflow_1_1gui_1_1CoreProcess.html#a0b7f6621de591092bee640af186c6853":[5,0,0,3,5,15],
 "classdeskflow_1_1gui_1_1CoreProcess.html#a0b7f6621de591092bee640af186c6853":[6,0,0,2,4,15],
 "classdeskflow_1_1gui_1_1CoreProcess.html#a0cdc63a484155a1564542904170c2617":[5,0,0,3,5,18],
@@ -68,8 +64,6 @@ var NAVTREEINDEX19 =
 "classdeskflow_1_1gui_1_1CoreProcess.html#a19622d42b3b977bbddec07124ee48b00":[6,0,0,2,4,17],
 "classdeskflow_1_1gui_1_1CoreProcess.html#a2bd697f4ca8d32e594ddbd35a6e07484":[5,0,0,3,5,6],
 "classdeskflow_1_1gui_1_1CoreProcess.html#a2bd697f4ca8d32e594ddbd35a6e07484":[6,0,0,2,4,6],
-"classdeskflow_1_1gui_1_1CoreProcess.html#a4e57df8dafab4e865f1bcec2efe0a8b8":[5,0,0,3,5,23],
-"classdeskflow_1_1gui_1_1CoreProcess.html#a4e57df8dafab4e865f1bcec2efe0a8b8":[6,0,0,2,4,23],
 "classdeskflow_1_1gui_1_1CoreProcess.html#a689253f2679161ad8ca04f07a1e67004":[5,0,0,3,5,14],
 "classdeskflow_1_1gui_1_1CoreProcess.html#a689253f2679161ad8ca04f07a1e67004":[6,0,0,2,4,14],
 "classdeskflow_1_1gui_1_1CoreProcess.html#a6d40732c891af7bad2c7087be0768db1":[5,0,0,3,5,13],
@@ -164,6 +158,8 @@ var NAVTREEINDEX19 =
 "classdeskflow_1_1gui_1_1ServerConnection.html":[6,0,0,2,8],
 "classdeskflow_1_1gui_1_1ServerConnection.html#a1ee48784cb1e77a1143c7c96cedaa8d8":[5,0,0,3,9,4],
 "classdeskflow_1_1gui_1_1ServerConnection.html#a1ee48784cb1e77a1143c7c96cedaa8d8":[6,0,0,2,8,4],
+"classdeskflow_1_1gui_1_1ServerConnection.html#a2b36cee789c77201f126da1f0d1fb962":[5,0,0,3,9,6],
+"classdeskflow_1_1gui_1_1ServerConnection.html#a2b36cee789c77201f126da1f0d1fb962":[6,0,0,2,8,6],
 "classdeskflow_1_1gui_1_1ServerConnection.html#a420b4d8bb63c4f81f85e3de84f01a622":[5,0,0,3,9,1],
 "classdeskflow_1_1gui_1_1ServerConnection.html#a420b4d8bb63c4f81f85e3de84f01a622":[6,0,0,2,8,1],
 "classdeskflow_1_1gui_1_1ServerConnection.html#a4485d9788a449269027f4e6bc3c67478":[5,0,0,3,9,3],
@@ -249,5 +245,9 @@ var NAVTREEINDEX19 =
 "classdeskflow_1_1platform_1_1MSWindowsProcess.html#a17d6d6059e6cdf6ec4e269c8ace454a9":[5,0,0,5,0,8],
 "classdeskflow_1_1platform_1_1MSWindowsProcess.html#a17d6d6059e6cdf6ec4e269c8ace454a9":[6,0,0,4,0,8],
 "classdeskflow_1_1platform_1_1MSWindowsProcess.html#a3240131b60f8ba6e8c3df928e412195b":[5,0,0,5,0,1],
-"classdeskflow_1_1platform_1_1MSWindowsProcess.html#a3240131b60f8ba6e8c3df928e412195b":[6,0,0,4,0,1]
+"classdeskflow_1_1platform_1_1MSWindowsProcess.html#a3240131b60f8ba6e8c3df928e412195b":[6,0,0,4,0,1],
+"classdeskflow_1_1platform_1_1MSWindowsProcess.html#a3aaecfd023dbd70093d3b1f2d9630f7f":[5,0,0,5,0,4],
+"classdeskflow_1_1platform_1_1MSWindowsProcess.html#a3aaecfd023dbd70093d3b1f2d9630f7f":[6,0,0,4,0,4],
+"classdeskflow_1_1platform_1_1MSWindowsProcess.html#a425586420123c408f3e44936ad6d5d35":[5,0,0,5,0,9],
+"classdeskflow_1_1platform_1_1MSWindowsProcess.html#a425586420123c408f3e44936ad6d5d35":[6,0,0,4,0,9]
 };
