@@ -25,19 +25,19 @@
 var NAVTREE =
 [
   [ "Deskflow", "index.html", [
-    [ "Building Deskflow", "md_doc_2dev_2build.html", [
-      [ "Configuration", "md_doc_2dev_2build.html#autotoc_md1", [
-        [ "Windows Configuration", "md_doc_2dev_2build.html#autotoc_md2", [
-          [ "Windows and Qt", "md_doc_2dev_2build.html#autotoc_md3", [
-            [ "System Qt", "md_doc_2dev_2build.html#autotoc_md4", null ],
-            [ "vcpkg managed Qt", "md_doc_2dev_2build.html#autotoc_md5", null ]
+    [ "Building Deskflow", "md_docs_2dev_2build.html", [
+      [ "Configuration", "md_docs_2dev_2build.html#autotoc_md1", [
+        [ "Windows Configuration", "md_docs_2dev_2build.html#autotoc_md2", [
+          [ "Windows and Qt", "md_docs_2dev_2build.html#autotoc_md3", [
+            [ "System Qt", "md_docs_2dev_2build.html#autotoc_md4", null ],
+            [ "vcpkg managed Qt", "md_docs_2dev_2build.html#autotoc_md5", null ]
           ] ]
         ] ],
-        [ "macOS codesign", "md_doc_2dev_2build.html#autotoc_md6", null ]
+        [ "macOS codesign", "md_docs_2dev_2build.html#autotoc_md6", null ]
       ] ],
-      [ "Build", "md_doc_2dev_2build.html#autotoc_md7", null ],
-      [ "Install", "md_doc_2dev_2build.html#autotoc_md8", null ],
-      [ "Making Deskflow packages", "md_doc_2dev_2build.html#autotoc_md9", null ]
+      [ "Build", "md_docs_2dev_2build.html#autotoc_md7", null ],
+      [ "Install", "md_docs_2dev_2build.html#autotoc_md8", null ],
+      [ "Making Deskflow packages", "md_docs_2dev_2build.html#autotoc_md9", null ]
     ] ],
     [ "Contributing to Deskflow", "contributing_guide.html", [
       [ "Read the Full Guidelines", "contributing_guide.html#autotoc_md10", null ]
